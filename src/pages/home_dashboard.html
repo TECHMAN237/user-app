@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EcoLink Cameroon - Home Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7a2c38",
+                        "secondary": "#006d36",
+                        "on-background": "#181d18",
+                        "secondary-fixed-dim": "#73dc91",
+                        "surface-container": "#ebefe8",
+                        "on-tertiary-container": "#ffcace",
+                        "inverse-on-surface": "#eef2eb",
+                        "outline-variant": "#bfc9be",
+                        "surface-container-highest": "#e0e4dd",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#007239",
+                        "on-surface": "#181d18",
+                        "secondary-container": "#8cf6a8",
+                        "primary-fixed-dim": "#87d89c",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "outline": "#6f7a70",
+                        "surface-variant": "#e0e4dd",
+                        "on-primary-fixed-variant": "#005229",
+                        "on-surface-variant": "#3f4940",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#00210d",
+                        "inverse-primary": "#87d89c",
+                        "tertiary-fixed": "#ffdadc",
+                        "primary-container": "#146b3a",
+                        "on-error": "#ffffff",
+                        "tertiary": "#792b38",
+                        "background": "#f7fbf3",
+                        "surface-tint": "#166c3b",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#a2f5b6",
+                        "surface-dim": "#d7dbd4",
+                        "surface-bright": "#f7fbf3",
+                        "inverse-surface": "#2d322d",
+                        "primary": "#005128",
+                        "secondary-fixed": "#8ff9ab",
+                        "surface-container-high": "#e5e9e2",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f1f5ed",
+                        "on-primary-container": "#97e9ab",
+                        "on-secondary-fixed-variant": "#005227",
+                        "on-tertiary-fixed": "#400010",
+                        "tertiary-container": "#97424e",
+                        "surface": "#f7fbf3",
+                        "on-secondary-fixed": "#00210c",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "gutter-mobile": "16px",
+                        "xl": "48px",
+                        "md": "24px",
+                        "margin-mobile": "20px",
+                        "sm": "16px",
+                        "lg": "32px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "display-lg-mobile": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "display-lg": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #F7F8F7;
+            font-family: 'Inter', sans-serif;
+            color: #181d18;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .shadow-soft {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .active-pill {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex flex-col min-h-screen">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-margin-mobile h-16 max-w-2xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of Michael, a young Cameroonian man with a warm smile, wearing a clean white polo shirt. The background is a soft-focus lush green tropical garden in Douala, Cameroon, with natural morning sunlight highlighting his face. The portrait is high-definition, corporate-modern, and reflects a sense of leadership and community involvement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2OepcfCpaq0YEwu8aH0keX8imctW6q2iS0r3-mDPM66uBwgjZzwuecuVxbjnLJeTz6mmYLwT_Tq3kzJTB4BCS_cxigXdUE21YSnNHE3VeyG4TrGYR91wfmV0m2mp8Irrc6LS_N3q4bNzPaaxCOFqHlWBQcZ0nw59qrnZ2P5gMUekxqEfKkiCgZtMPfHxeeMYfprS8HJ0zn_8VXNDmPOXNodMJh3dNfcnWhpPnqfhP9cBr0mL4PyyodET3Fc-kYMdyfRuC4Y0hkELx"/>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-caps text-[10px] uppercase tracking-wider">Good Morning,</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">EcoLink Cameroon</h1>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface hover:opacity-80 transition-opacity active:scale-95">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<main class="flex-1 mt-20 mb-24 px-margin-mobile max-w-2xl mx-auto w-full space-y-md">
+<!-- Welcome Section -->
+<section>
+<p class="text-body-lg text-on-surface-variant mb-base">Every action today creates a greener Cameroon tomorrow.</p>
+</section>
+<!-- Featured Eco Champion Card -->
+<section class="relative h-64 rounded-3xl overflow-hidden shadow-lg group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A group of diverse, young Cameroonian volunteers working together in a sun-drenched coastal field. They are planting indigenous mangrove saplings near Limbe, with the volcanic soil rich and dark under their hands. The lighting is bright and optimistic, emphasizing the vibrant green of the young plants and the cooperative spirit of the community. Cinematic, high-fidelity environmental photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkFSXwegbinUOKamEwnfZ_kWCrSspYVrcqUbC_A0ZK3Hscoyf_MM6HjZEDBuRaz7pFFvd_YpPVdEQdBOZZPg9pDrx_Llm2GCl-Ek_unJtDCvCya0HmVa_ZPgBhW3HIXgymrQ_e73JUF3LVRfbBppwnfMRZU1K_CwZ9kowxG2HUYnppXsxYEYcgseDCW5vb6S_QMGIzGI7t54ndD-lyVI7GLhJ-B8AohW2SqvMOC2J3_o3dLi10KEHhzWPS01WtnxysTx1eut4jLBMz')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-md flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<div class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-[12px] font-bold">Eco Champion</span>
+</div>
+<span class="text-white text-body-sm font-semibold">Level 12</span>
+</div>
+<div class="w-full bg-white/30 h-2 rounded-full mt-1">
+<div class="bg-secondary-fixed h-full rounded-full w-[82%]" style="box-shadow: 0 0 10px rgba(143, 249, 171, 0.8);"></div>
+</div>
+<span class="text-white/80 text-[12px] text-right">82% to Level 13</span>
+</div>
+</section>
+<!-- EcoPoints Balance -->
+<section class="bg-primary-container rounded-2xl p-md flex justify-between items-center text-on-primary-container shadow-soft">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-on-primary-container/20 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">eco</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps opacity-80">TOTAL BALANCE</span>
+<span class="text-[28px] font-extrabold leading-tight">8,450 <span class="text-[16px] font-medium opacity-90">EcoPoints</span></span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[24px]">chevron_right</span>
+</section>
+<!-- Impact Metrics Grid -->
+<section>
+<div class="flex justify-between items-end mb-sm">
+<h2 class="font-headline-md text-headline-md font-bold">Environmental Impact</h2>
+<button class="text-primary font-bold text-body-sm">See all</button>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<!-- Trees -->
+<div class="bg-white p-sm rounded-2xl shadow-soft flex flex-col gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">forest</span>
+</div>
+<div>
+<span class="block text-[20px] font-bold">187</span>
+<span class="text-on-surface-variant text-[12px]">Trees Planted</span>
+</div>
+</div>
+<!-- Waste -->
+<div class="bg-white p-sm rounded-2xl shadow-soft flex flex-col gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">recycling</span>
+</div>
+<div>
+<span class="block text-[20px] font-bold">325 <span class="text-[12px]">kg</span></span>
+<span class="text-on-surface-variant text-[12px]">Waste Recycled</span>
+</div>
+</div>
+<!-- Hours -->
+<div class="bg-white p-sm rounded-2xl shadow-soft flex flex-col gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<span class="block text-[20px] font-bold">42 <span class="text-[12px]">h</span></span>
+<span class="text-on-surface-variant text-[12px]">Volunteer Hours</span>
+</div>
+</div>
+<!-- Water -->
+<div class="bg-white p-sm rounded-2xl shadow-soft flex flex-col gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<span class="block text-[20px] font-bold">4,500 <span class="text-[12px]">L</span></span>
+<span class="text-on-surface-variant text-[12px]">Water Saved</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Active EcoQuest -->
+<section>
+<div class="flex justify-between items-end mb-sm">
+<h2 class="font-headline-md text-headline-md font-bold">Active EcoQuest</h2>
+<button class="text-primary font-bold text-body-sm">Details</button>
+</div>
+<div class="bg-white rounded-3xl p-sm shadow-soft flex items-center gap-4">
+<div class="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close-up of a small, vibrant green tree seedling being gently held by a pair of hands stained with rich, dark Cameroonian soil. The sunlight is soft and warm, catching the details of the young leaves. High-resolution macro photography with a soft bokeh background of a nursery in Yaoundé." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXaSi3M79UNTkg27GAnZyVvHtqNx9LnjLgXXBnsCcjw5mUod1o-cLzu1XW2WfGww4pgqRDQtgAC9BtobrfbOVnVs-6DVHnjR3tFCTZDYwL-NaY87O4GCghpKvZBdTlQTygQ-TX5fmxRMzsYuXak0PX7-tGjw5cxNG2bb4XfcyRiEVVnfjz9uhZwwXe2s5I1MtaYabi2kVWQQXdGqB0ypUYTI5yd0IW95G9CYO2HfAHNqEGMjsU0L09rd4xh1l07XKlUtJQV7LjmAz5"/>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<h3 class="font-bold text-body-lg">Plant 5 Trees This Month</h3>
+<div class="flex items-center gap-1">
+<span class="text-secondary font-bold text-body-sm">+500 EcoPoints</span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<div class="flex-1 h-1.5 bg-surface-container rounded-full mr-4">
+<div class="bg-secondary h-full rounded-full w-4/5"></div>
+</div>
+<span class="text-on-surface-variant text-[11px] font-bold">4 / 5</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-full font-bold text-body-sm active:scale-95 transition-transform">Continue</button>
+</div>
+</section>
+<!-- Upcoming Event -->
+<section class="pb-8">
+<div class="flex justify-between items-end mb-sm">
+<h2 class="font-headline-md text-headline-md font-bold">Upcoming Event</h2>
+<button class="text-primary font-bold text-body-sm">View Calendar</button>
+</div>
+<div class="bg-surface-container rounded-3xl p-md border border-outline-variant/30">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-[20px] font-extrabold text-on-surface leading-tight">Sustainability Workshop</h3>
+<p class="text-on-surface-variant text-body-sm">Learn modern eco-friendly living</p>
+</div>
+<div class="bg-white rounded-xl p-2 flex flex-col items-center justify-center min-w-[50px] shadow-sm">
+<span class="text-error font-bold text-[12px]">JUL</span>
+<span class="text-[18px] font-extrabold">05</span>
+</div>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant text-body-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span>Bafoussam, West</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">group</span>
+<span>80 Participants</span>
+</div>
+</div>
+<button class="w-full mt-md bg-white text-primary border border-primary/20 py-3 rounded-2xl font-bold hover:bg-primary hover:text-white transition-all active:scale-[0.98]">
+                    Join Workshop
+                </button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-xs py-base bg-surface shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] h-20">
+<!-- Explore -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-caps text-label-caps mt-1">Explore</span>
+</a>
+<!-- EcoQuest -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">nature_people</span>
+<span class="font-label-caps text-label-caps mt-1">EcoQuest</span>
+</a>
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 duration-150 active-pill" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-caps text-label-caps mt-0.5">Home</span>
+</a>
+<!-- Rewards -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="font-label-caps text-label-caps mt-1">Rewards</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-caps text-label-caps mt-1">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction: Update progress bar on scroll or interaction if needed
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('EcoLink Dashboard Initialized');
+            
+            // Simple animation for the Eco Champion progress bar on load
+            const progressBar = document.querySelector('.bg-secondary-fixed');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+                setTimeout(() => {
+                    progressBar.style.transition = 'width 1.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                    progressBar.style.width = '82%';
+                }, 300);
+            }
+        });
+    </script>
+</body></html>

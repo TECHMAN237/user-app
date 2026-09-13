@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7a2c38",
+                        "secondary": "#006d36",
+                        "on-background": "#181d18",
+                        "secondary-fixed-dim": "#73dc91",
+                        "surface-container": "#ebefe8",
+                        "on-tertiary-container": "#ffcace",
+                        "inverse-on-surface": "#eef2eb",
+                        "outline-variant": "#bfc9be",
+                        "surface-container-highest": "#e0e4dd",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#007239",
+                        "on-surface": "#181d18",
+                        "secondary-container": "#8cf6a8",
+                        "primary-fixed-dim": "#87d89c",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "outline": "#6f7a70",
+                        "surface-variant": "#e0e4dd",
+                        "on-primary-fixed-variant": "#005229",
+                        "on-surface-variant": "#3f4940",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#00210d",
+                        "inverse-primary": "#87d89c",
+                        "tertiary-fixed": "#ffdadc",
+                        "primary-container": "#146b3a",
+                        "on-error": "#ffffff",
+                        "tertiary": "#792b38",
+                        "background": "#f7fbf3",
+                        "surface-tint": "#166c3b",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#a2f5b6",
+                        "surface-dim": "#d7dbd4",
+                        "surface-bright": "#f7fbf3",
+                        "inverse-surface": "#2d322d",
+                        "primary": "#005128",
+                        "secondary-fixed": "#8ff9ab",
+                        "surface-container-high": "#e5e9e2",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f1f5ed",
+                        "on-primary-container": "#97e9ab",
+                        "on-secondary-fixed-variant": "#005227",
+                        "on-tertiary-fixed": "#400010",
+                        "tertiary-container": "#97424e",
+                        "surface": "#f7fbf3",
+                        "on-secondary-fixed": "#00210c",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "16px",
+                        "3xl": "24px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "gutter-mobile": "16px",
+                        "xl": "48px",
+                        "md": "24px",
+                        "margin-mobile": "20px",
+                        "sm": "16px",
+                        "lg": "32px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        .progress-ring-circle { transition: stroke-dashoffset 0.35s; transform: rotate(-90deg); transform-origin: 50% 50%; }
+        .custom-shadow { shadow-[0px_4px_20px_rgba(0,0,0,0.05)] }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-background flex justify-between items-center px-margin-mobile h-16">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed-dim">
+<img class="w-full h-full object-cover" data-alt="A professional close-up headshot of Michael, a young Cameroonian professional with a warm, confident smile. He is set against a lush, soft-focus background of tropical greenery in Cameroon, symbolizing his commitment to the environment. The lighting is bright and natural, reflecting a high-end light-mode aesthetic with crisp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnOkIVv_TZthf1wnw3QdEL0KJVXQioSiuhCDWURwYOvs0C4LnjeCtu5psukCrRcolQaXsKf9Wye45eYgqTHHvZ0-VBqOEQWpgEd3jg_NOewW1mIfYfqAIB18Iq-0Kt99oC-0bJhBP9uBckP5fyG0J-F9CRC_dpoNfshBHC5lt78uEXfFA4jQRtMkDGL50y55N53-e3pX7UqwJHAjcoKRVEwhpe-lebSk5ij5KgE2uwPBmAdeb9Fy_hgC7UPzlekDZs9yD4crM1KBKA"/>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">EcoLink Cameroon</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1 bg-surface-container-high px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-orange-500 text-lg" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="text-label-caps font-bold text-on-surface">12</span>
+</div>
+<button class="material-symbols-outlined text-primary hover:opacity-80 active:scale-95 transition-transform" data-icon="notifications">notifications</button>
+</div>
+</header>
+<main class="pt-20 px-margin-mobile space-y-md">
+<!-- Header Section -->
+<section class="flex items-center justify-between">
+<div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-on-surface">EcoQuest</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gamify your green footprint</p>
+</div>
+<div class="p-2 rounded-2xl bg-primary-container text-on-primary-container">
+<span class="material-symbols-outlined text-[32px]" data-icon="nature_people">nature_people</span>
+</div>
+</section>
+<!-- Weekly Progress Card (Duolingo Style) -->
+<section class="bg-surface-container-lowest rounded-3xl p-md shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-surface-container-highest">
+<div class="flex items-center justify-between mb-sm">
+<div>
+<h3 class="font-headline-md text-headline-md">Weekly Progress</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Leveling up to Eco Hero</p>
+</div>
+<div class="relative w-20 h-20">
+<svg class="w-full h-full">
+<circle class="text-surface-container-high" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary progress-ring-circle" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="56" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-label-caps font-bold text-secondary">74%</span>
+</div>
+</div>
+</div>
+<div class="flex items-end justify-between bg-surface-container-low p-sm rounded-2xl">
+<div class="space-y-xs">
+<div class="flex items-center gap-2">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary">14</span>
+<span class="font-body-lg text-body-lg text-on-surface-variant">/ 19</span>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Challenges Completed</p>
+</div>
+<div class="w-20">
+<img class="w-full h-auto" data-alt="A small, vibrant green sapling sprouting from dark, rich Cameroonian soil. The image is a crisp, close-up photograph with high resolution, showing dewdrops on the leaves. The lighting is soft and morning-like, set against a pristine, bright background consistent with a premium corporate environmental app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASCpCCyoHfGRr4oOabsZJgcBV2VvQgHXYy8UXMEgfU7gNfheUlKIyOSoYSKniyxLjRfJrAcaQxXPkEsOqn8pyYBIsqP3nIL4DWBBfeaukWExKyly5V1tG7PKJONAIZLJ5Qn-w_9S_elVkItZv-zFYenNtzBB7CYNqtzQyvfwxqQvpJoba4_CI9DCky3R7EoyujFeg5N7alDHl5K6wFi6zIn-VoDujYVr1VykIMuqv1aFbufqVilQWpyEsOIvEMuxYk5uyPUMOVMA4c"/>
+</div>
+</div>
+</section>
+<!-- Active Challenges List -->
+<section class="space-y-sm">
+<div class="flex justify-between items-center px-xs">
+<h4 class="font-headline-md text-headline-md">Active Challenges</h4>
+<button class="text-primary font-label-caps hover:underline">View All</button>
+</div>
+<!-- Challenge Card 1 -->
+<div class="group bg-surface-container-lowest rounded-3xl p-sm border border-surface-container-highest shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex gap-4 transition-all hover:border-primary/30">
+<div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A wide-angle, cinematic photograph of local volunteers planting native trees in the Sanaga river valley, Cameroon. The scene is bright and hopeful, with sunlight filtering through a hazy tropical sky. The colors are dominated by rich forest greens and warm earth tones, maintaining a professional and inspiring documentary style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5qF4pd7OUQma5rwaRc9l3VfcgZ5joP42k59MgwaYcoguiDdCXi7XTskmlDV_D2X6JExPDQu5BYKtPNoWTh7ZzaIwrbKGyheHumPB--1hMnRYVH5Vm1FySOLgjBqc1qemp_bbRL8851Jrv5gTkiLQAPSUcfNiKUwQTl3SFeh_TxEphCXEI51Ftz1NrimKUuf9c-QcFdOcSME-p-HCCHDXsEWF0hZbJ3MLVAfbbxGzxCjvhWOctlfeYLOwRW7_F4mk7hdxQfXtbjM7E"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-body-lg font-bold text-on-surface">Plant a Tree</h5>
+<p class="text-body-sm text-on-surface-variant">Plant and nurture a tree</p>
+</div>
+<span class="text-secondary font-bold text-label-caps">+250 pts</span>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between items-center text-label-caps text-on-surface-variant">
+<span>3 / 5</span>
+<button class="bg-primary text-on-primary px-4 py-1 rounded-full font-bold text-xs hover:bg-primary-container transition-colors">Continue</button>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[60%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Challenge Card 2 (Completed) -->
+<div class="group bg-surface-container-low opacity-75 rounded-3xl p-sm border border-transparent flex gap-4">
+<div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0 grayscale">
+<img class="w-full h-full object-cover" data-alt="A minimalist and aesthetic photograph of a reusable bamboo coffee cup and a cotton tote bag placed on a clean white wooden surface. The composition is bright and airy, symbolizing a plastic-free lifestyle in a modern Cameroonian context. High-key lighting and clean lines evoke a premium, eco-conscious professional brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqYKkwLTpMltoJkSrjZwN3t1BThqR2FNIBwMi3SACYOrTwQ8KSLNUAoBFZyzbfCE_L03fXvmXeu9vLibo_qNxZe0jmZRrgbuM5-ILkGXoUQVr5q4Z1dnI3jHwsEdaKG-YPp_DwUQnewSAMSaSLi-AzbBku5GK9uLWD6xKRfNZHzB4XYVY-XRBqdksp7VJrRguMpL8yPpXluj3-BOUMMl6_F1-4R3o0ySKq8KAoWhnf2JrF6ql0pFTMeaWF4UHb1-ZL2e7Mk8nU_hQU"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-body-lg font-bold text-on-surface">Plastic-Free Day</h5>
+<p class="text-body-sm text-on-surface-variant">Avoid single-use plastic</p>
+</div>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-label-caps font-bold text-secondary">Completed</span>
+<span class="text-secondary font-bold text-label-caps">+100 pts</span>
+</div>
+</div>
+</div>
+<!-- Challenge Card 3 -->
+<div class="group bg-surface-container-lowest rounded-3xl p-sm border border-surface-container-highest shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex gap-4 transition-all hover:border-primary/30">
+<div class="w-24 h-24 rounded-2xl overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="An action-oriented photograph of youth in Douala participating in a neighborhood cleanup project. They are wearing green 'EcoLink' vests, smiling, and working together to collect recyclables. The lighting is crisp and midday, capturing the vibrant urban energy of Cameroon paired with positive civic action." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_VQ0DFu-vEp8pge_DiDwD2ptqUWn4l_MM07JhzRhVrlm6lohSAojfB-YC-RrGhej9CEGSza-U3nEjyuuYj3g74oHd7MEv6jdVC5uBjVHVfeIYGjkNn2JV9PG37D2k4ur3O_uJwy_aHAkuCcr1DkSChXaz9zQNmOOagLAssBmc2ntnHhTP-rFq1LHfWME5FIgsmknSTCOy38LPv-LvFYmuluKl2oUzssnm2uU6ZEPxUEfqHQF0xJoTXxSNuZddu_Vb2-fHDbGlgOmy"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1">
+<div class="flex justify-between items-start">
+<div>
+<h5 class="font-body-lg font-bold text-on-surface">Clean Neighborhood</h5>
+<p class="text-body-sm text-on-surface-variant">Collect and dispose waste</p>
+</div>
+<span class="text-secondary font-bold text-label-caps">+300 pts</span>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between items-center text-label-caps text-on-surface-variant">
+<span>0 / 1</span>
+<button class="border-2 border-primary text-primary px-4 py-1 rounded-full font-bold text-xs hover:bg-primary-container hover:text-on-primary-container transition-colors">Start</button>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-0 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Streak Reward Banner -->
+<div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-md text-on-primary relative overflow-hidden">
+<div class="relative z-10 space-y-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<h5 class="font-headline-md text-headline-md">12-Day Eco Streak 🔥</h5>
+</div>
+<p class="font-body-sm text-body-sm text-primary-fixed">Keep it up! You're making a difference.</p>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-20">
+<span class="material-symbols-outlined text-[120px]">eco</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Predicted) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-xs py-base bg-surface shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] h-20">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-label-caps text-label-caps mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="nature_people" style="font-variation-settings: 'FILL' 1;">nature_people</span>
+<span class="font-label-caps text-label-caps mt-1">EcoQuest</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="workspace_premium">workspace_premium</span>
+<span class="font-label-caps text-label-caps mt-1">Rewards</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-caps text-label-caps mt-1">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for the progress circle
+        window.addEventListener('load', () => {
+            const circle = document.querySelector('.progress-ring-circle');
+            const radius = circle.r.baseVal.value;
+            const circumference = radius * 2 * Math.PI;
+            
+            circle.style.strokeDasharray = `${circumference} ${circumference}`;
+            const offset = circumference - (74 / 100 * circumference);
+            circle.style.strokeDashoffset = offset;
+        });
+    </script>
+</body></html>

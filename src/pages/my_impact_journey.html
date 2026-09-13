@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EcoLink Cameroon - My Impact Journey</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .premium-card-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .glass-overlay {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.4);
+        }
+        /* Custom scrollbar for horizontal sections */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7a2c38",
+                        "secondary": "#006d36",
+                        "on-background": "#181d18",
+                        "secondary-fixed-dim": "#73dc91",
+                        "surface-container": "#ebefe8",
+                        "on-tertiary-container": "#ffcace",
+                        "inverse-on-surface": "#eef2eb",
+                        "outline-variant": "#bfc9be",
+                        "surface-container-highest": "#e0e4dd",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#007239",
+                        "on-surface": "#181d18",
+                        "secondary-container": "#8cf6a8",
+                        "primary-fixed-dim": "#87d89c",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "outline": "#6f7a70",
+                        "surface-variant": "#e0e4dd",
+                        "on-primary-fixed-variant": "#005229",
+                        "on-surface-variant": "#3f4940",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#00210d",
+                        "inverse-primary": "#87d89c",
+                        "tertiary-fixed": "#ffdadc",
+                        "primary-container": "#146b3a",
+                        "on-error": "#ffffff",
+                        "tertiary": "#792b38",
+                        "background": "#f7fbf3",
+                        "surface-tint": "#166c3b",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#a2f5b6",
+                        "surface-dim": "#d7dbd4",
+                        "surface-bright": "#f7fbf3",
+                        "inverse-surface": "#2d322d",
+                        "primary": "#005128",
+                        "secondary-fixed": "#8ff9ab",
+                        "surface-container-high": "#e5e9e2",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f1f5ed",
+                        "on-primary-container": "#97e9ab",
+                        "on-secondary-fixed-variant": "#005227",
+                        "on-tertiary-fixed": "#400010",
+                        "tertiary-container": "#97424e",
+                        "surface": "#f7fbf3",
+                        "on-secondary-fixed": "#00210c",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "16px",
+                        "3xl": "24px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "gutter-mobile": "16px",
+                        "xl": "48px",
+                        "md": "24px",
+                        "margin-mobile": "20px",
+                        "sm": "16px",
+                        "lg": "32px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center w-full px-margin-mobile h-16 fixed top-0 z-50 bg-background dark:bg-background">
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">EcoLink Cameroon</h1>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80 active:scale-95 transition-transform" data-icon="notifications">notifications</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of Michael, a smiling Cameroonian environmentalist, in high-key natural lighting. The image is crisp with soft shadows, reflecting a modern corporate aesthetic. He wears a clean white collared shirt, and the background is a soft-focus greenery that hints at nature conservation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3T-oX3pJS74KMlMnYmHmlK0cjfc17wtxdd32vJ3Ji9RQabLufgo5heFblpVk2gu7dDfvSESODnIZuOHXXWjZcoskE82FHWb4drBq8mUJAAA5J1kcULlPfziril8PLES0DFLo7p-FfvX2BSbH-UY5ZYDFXvrIDgq6CPlsbjLROBjC8IrRKd5okR6nmscJSRDS9_opYJpcRMHXmbn8Yph7VMsKcRIw5aBJ0qM0PxHybtzgCYRhP1um0RppEDaDN29lcB2hu5IGKUjj4"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-28 px-margin-mobile flex flex-col gap-md">
+<!-- Header Section -->
+<section>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-on-surface">My Impact Journey</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Every action creates a greener tomorrow.</p>
+</section>
+<!-- Premium Level Card (Level 12 Eco Champion) -->
+<section class="relative overflow-hidden bg-primary p-md rounded-3xl premium-card-shadow text-on-primary">
+<!-- Background Decorative Texture -->
+<div class="absolute top-0 right-0 w-32 h-32 opacity-10 -mr-8 -mt-8">
+<span class="material-symbols-outlined text-[120px]" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase opacity-80 tracking-widest">Your Impact Level</span>
+<h3 class="font-display-lg-mobile text-display-lg-mobile mt-1">Level 12</h3>
+<p class="font-headline-md text-headline-md font-bold text-on-primary-container bg-primary-container px-3 py-1 rounded-full w-fit mt-2">Eco Champion</p>
+</div>
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full border-2 border-white/20 backdrop-blur-sm">
+<span class="material-symbols-outlined text-6xl text-on-primary" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<div class="mt-8">
+<div class="flex justify-between text-body-sm mb-2">
+<span class="font-body-sm">2,450 XP to Level 13</span>
+<span class="font-bold">82%</span>
+</div>
+<div class="w-full h-3 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Impact Highlights -->
+<section class="grid grid-cols-2 gap-sm">
+<!-- Tree Planting Chart Card (Spans 2 columns for impact) -->
+<div class="col-span-2 bg-surface p-sm rounded-2xl border border-outline-variant premium-card-shadow">
+<div class="flex justify-between items-center mb-md">
+<h4 class="font-headline-md text-headline-md">Your Impact This Year</h4>
+<button class="text-primary font-bold text-body-sm">View All</button>
+</div>
+<div class="flex items-end justify-around h-32 gap-4 px-2">
+<!-- Simple Bar Chart -->
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary-container rounded-t-lg" style="height: 40%;"></div>
+<span class="font-label-caps text-[10px] mt-2">JAN</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary-container rounded-t-lg" style="height: 65%;"></div>
+<span class="font-label-caps text-[10px] mt-2">FEB</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary rounded-t-lg" style="height: 90%;"></div>
+<span class="font-label-caps text-[10px] mt-2">MAR</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary-container rounded-t-lg" style="height: 55%;"></div>
+<span class="font-label-caps text-[10px] mt-2">APR</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary-container rounded-t-lg" style="height: 75%;"></div>
+<span class="font-label-caps text-[10px] mt-2">MAY</span>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="bg-surface p-sm rounded-2xl border border-outline-variant premium-card-shadow flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-secondary mb-1" data-icon="nature">nature</span>
+<span class="font-display-lg-mobile text-display-lg-mobile">187</span>
+<span class="font-label-caps text-on-surface-variant">Trees Planted</span>
+</div>
+<div class="bg-surface p-sm rounded-2xl border border-outline-variant premium-card-shadow flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-secondary mb-1" data-icon="recycling">recycling</span>
+<span class="font-display-lg-mobile text-display-lg-mobile">325<small class="text-sm">kg</small></span>
+<span class="font-label-caps text-on-surface-variant">Waste Recycled</span>
+</div>
+<div class="bg-surface p-sm rounded-2xl border border-outline-variant premium-card-shadow flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-secondary mb-1" data-icon="timer">timer</span>
+<span class="font-display-lg-mobile text-display-lg-mobile">42<small class="text-sm">h</small></span>
+<span class="font-label-caps text-on-surface-variant">Volunteer Hours</span>
+</div>
+<div class="bg-surface p-sm rounded-2xl border border-outline-variant premium-card-shadow flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-secondary mb-1" data-icon="water_drop">water_drop</span>
+<span class="font-display-lg-mobile text-display-lg-mobile">4,500<small class="text-sm">L</small></span>
+<span class="font-label-caps text-on-surface-variant">Water Saved</span>
+</div>
+</section>
+<!-- EcoPoints Balance Card -->
+<section class="bg-secondary-container p-md rounded-2xl flex justify-between items-center premium-card-shadow">
+<div>
+<span class="font-label-caps text-on-secondary-container uppercase">Your EcoPoints</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="token" style="font-variation-settings: 'FILL' 1;">token</span>
+<h4 class="font-display-lg text-display-lg text-on-secondary-container">8,450</h4>
+</div>
+<p class="font-body-sm text-on-secondary-container/70">Available Balance</p>
+</div>
+<button class="bg-primary text-on-primary font-bold px-lg py-sm rounded-full active:scale-95 transition-transform">
+                View Rewards
+            </button>
+</section>
+<!-- Impact Milestones (Timeline) -->
+<section class="flex flex-col gap-sm">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-md text-headline-md">Impact Milestones</h4>
+<button class="text-primary font-bold text-body-sm">View All</button>
+</div>
+<div class="bg-surface p-md rounded-2xl border border-outline-variant premium-card-shadow space-y-md">
+<!-- Milestone 1 -->
+<div class="flex gap-md relative">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center z-10 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+</div>
+<div class="w-0.5 h-full bg-outline-variant absolute top-8 left-4 -z-0"></div>
+</div>
+<div class="flex flex-col flex-1 pb-4">
+<h5 class="font-body-lg font-bold">First Tree Planted</h5>
+<p class="font-body-sm text-on-surface-variant">Limbe Coastal Reforestation Project</p>
+<span class="font-label-caps text-secondary mt-1">COMPLETED</span>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="flex gap-md relative">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center z-10 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+</div>
+<div class="w-0.5 h-full bg-outline-variant absolute top-8 left-4 -z-0"></div>
+</div>
+<div class="flex flex-col flex-1 pb-4">
+<h5 class="font-body-lg font-bold">100 EcoPoints Earned</h5>
+<p class="font-body-sm text-on-surface-variant">Consistent waste segregation streak</p>
+<span class="font-label-caps text-secondary mt-1">COMPLETED</span>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="flex gap-md relative">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center z-10 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+</div>
+<div class="w-0.5 h-full bg-outline-variant absolute top-8 left-4 -z-0"></div>
+</div>
+<div class="flex flex-col flex-1 pb-4">
+<h5 class="font-body-lg font-bold">Community Volunteer</h5>
+<p class="font-body-sm text-on-surface-variant">Douala River Cleanup Initiative</p>
+<span class="font-label-caps text-secondary mt-1">COMPLETED</span>
+</div>
+</div>
+<!-- Milestone 4 (In Progress) -->
+<div class="flex gap-md relative">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full border-2 border-primary text-primary flex items-center justify-center z-10 bg-white">
+<span class="material-symbols-outlined text-sm" data-icon="pending">pending</span>
+</div>
+<div class="w-0.5 h-full bg-outline-variant absolute top-8 left-4 -z-0"></div>
+</div>
+<div class="flex flex-col flex-1 pb-4">
+<h5 class="font-body-lg font-bold">500kg Waste Recycled</h5>
+<p class="font-body-sm text-on-surface-variant">Currently at 325kg</p>
+<span class="font-label-caps text-on-surface-variant mt-1">IN PROGRESS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Achievement Badges (Premium Grid) -->
+<section class="flex flex-col gap-sm">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-md text-headline-md">My Badges</h4>
+<button class="text-primary font-bold text-body-sm">View All</button>
+</div>
+<div class="grid grid-cols-4 gap-sm">
+<div class="aspect-square bg-surface border border-outline-variant rounded-2xl flex flex-col items-center justify-center premium-card-shadow">
+<span class="material-symbols-outlined text-3xl text-secondary" data-icon="forest" style="font-variation-settings: 'FILL' 1;">forest</span>
+</div>
+<div class="aspect-square bg-surface border border-outline-variant rounded-2xl flex flex-col items-center justify-center premium-card-shadow">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="shield_with_heart" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div class="aspect-square bg-surface border border-outline-variant rounded-2xl flex flex-col items-center justify-center premium-card-shadow">
+<span class="material-symbols-outlined text-3xl text-secondary-fixed-dim" data-icon="energy_savings_leaf" style="font-variation-settings: 'FILL' 1;">energy_savings_leaf</span>
+</div>
+<div class="aspect-square bg-surface border border-outline-variant rounded-2xl flex flex-col items-center justify-center premium-card-shadow">
+<span class="material-symbols-outlined text-3xl text-on-tertiary-fixed-variant" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div class="aspect-square bg-surface border border-outline-variant rounded-2xl flex flex-col items-center justify-center premium-card-shadow opacity-40">
+<span class="material-symbols-outlined text-3xl text-outline" data-icon="lock">lock</span>
+</div>
+<div class="aspect-square bg-surface border border-outline-variant rounded-2xl flex flex-col items-center justify-center premium-card-shadow opacity-40">
+<span class="material-symbols-outlined text-3xl text-outline" data-icon="lock">lock</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-xs py-base bg-surface dark:bg-surface-container-low h-20 shadow-[0px_-4px_20px_rgba(0,0,0,0.05)]">
+<!-- Explore -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-2 hover:bg-surface-container-highest dark:hover:bg-surface-variant rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-label-caps text-label-caps mt-1">Explore</span>
+</a>
+<!-- EcoQuest -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-2 hover:bg-surface-container-highest dark:hover:bg-surface-variant rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="nature_people">nature_people</span>
+<span class="font-label-caps text-label-caps mt-1">EcoQuest</span>
+</a>
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-2 hover:bg-surface-container-highest dark:hover:bg-surface-variant rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</a>
+<!-- Rewards (Active) -->
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary-container text-on-primary-container dark:text-on-primary-container rounded-full px-4 py-1 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-label-caps text-label-caps mt-1">Rewards</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant p-2 hover:bg-surface-container-highest dark:hover:bg-surface-variant rounded-full transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-caps text-label-caps mt-1">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple Interaction logic for active state toggles or micro-animations
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                // If we were building a multi-page app, we'd handle navigation here.
+                // For this demo, we just simulate the active state.
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EcoLink Cameroon - Notifications</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #34C759;
+            border-radius: 50%;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7a2c38",
+                        "secondary": "#006d36",
+                        "on-background": "#181d18",
+                        "secondary-fixed-dim": "#73dc91",
+                        "surface-container": "#ebefe8",
+                        "on-tertiary-container": "#ffcace",
+                        "inverse-on-surface": "#eef2eb",
+                        "outline-variant": "#bfc9be",
+                        "surface-container-highest": "#e0e4dd",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#007239",
+                        "on-surface": "#181d18",
+                        "secondary-container": "#8cf6a8",
+                        "primary-fixed-dim": "#87d89c",
+                        "tertiary-fixed-dim": "#ffb2b9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "outline": "#6f7a70",
+                        "surface-variant": "#e0e4dd",
+                        "on-primary-fixed-variant": "#005229",
+                        "on-surface-variant": "#3f4940",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#00210d",
+                        "inverse-primary": "#87d89c",
+                        "tertiary-fixed": "#ffdadc",
+                        "primary-container": "#146b3a",
+                        "on-error": "#ffffff",
+                        "tertiary": "#792b38",
+                        "background": "#f7fbf3",
+                        "surface-tint": "#166c3b",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#a2f5b6",
+                        "surface-dim": "#d7dbd4",
+                        "surface-bright": "#f7fbf3",
+                        "inverse-surface": "#2d322d",
+                        "primary": "#005128",
+                        "secondary-fixed": "#8ff9ab",
+                        "surface-container-high": "#e5e9e2",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f1f5ed",
+                        "on-primary-container": "#97e9ab",
+                        "on-secondary-fixed-variant": "#005227",
+                        "on-tertiary-fixed": "#400010",
+                        "tertiary-container": "#97424e",
+                        "surface": "#f7fbf3",
+                        "on-secondary-fixed": "#00210c",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "gutter-mobile": "16px",
+                        "xl": "48px",
+                        "md": "24px",
+                        "margin-mobile": "20px",
+                        "sm": "16px",
+                        "lg": "32px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- Top AppBar -->
+<header class="sticky top-0 z-50 bg-background/80 backdrop-blur-md flex justify-between items-center w-full px-margin-mobile h-16">
+<div class="flex items-center gap-4">
+<button aria-label="Go Back" class="p-2 -ml-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Notifications</h1>
+</div>
+<button class="p-2 -mr-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</button>
+</header>
+<main class="px-margin-mobile">
+<!-- Segmented Control Chips -->
+<div class="flex gap-2 py-md overflow-x-auto no-scrollbar">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-4 py-2 rounded-full whitespace-nowrap shadow-sm">
+                All
+            </button>
+<button class="bg-surface-container text-on-surface-variant font-label-caps text-label-caps px-4 py-2 rounded-full whitespace-nowrap hover:bg-surface-container-highest transition-colors">
+                Unread
+            </button>
+<button class="bg-surface-container text-on-surface-variant font-label-caps text-label-caps px-4 py-2 rounded-full whitespace-nowrap hover:bg-surface-container-highest transition-colors">
+                Mentions
+            </button>
+<button class="bg-surface-container text-on-surface-variant font-label-caps text-label-caps px-4 py-2 rounded-full whitespace-nowrap hover:bg-surface-container-highest transition-colors">
+                Activity
+            </button>
+</div>
+<!-- Notifications List -->
+<div class="space-y-4">
+<!-- New Notification -->
+<div class="bg-white p-4 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex gap-4 items-start relative border-l-4 border-secondary">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-[16px] font-bold text-on-surface">Reward Earned</h3>
+<span class="text-[12px] text-outline">10m ago</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-1">You earned 250 EcoPoints for completing "Plant a Tree" challenge. Great job!</p>
+</div>
+<div class="absolute right-2 top-1/2 -translate-y-1/2">
+<div class="active-dot"></div>
+</div>
+</div>
+<!-- Event Reminder -->
+<div class="bg-white p-4 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex gap-4 items-start relative border-l-4 border-primary-container">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-[16px] font-bold text-on-surface">Event Reminder</h3>
+<span class="text-[12px] text-outline">1h ago</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-1">Limbe Coastal Cleanup starts tomorrow at 8:00 AM. Don't forget your gear!</p>
+</div>
+<div class="absolute right-2 top-1/2 -translate-y-1/2">
+<div class="active-dot"></div>
+</div>
+</div>
+<!-- Certificate Available -->
+<div class="bg-white p-4 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex gap-4 items-start border-l-4 border-outline-variant">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-[16px] font-bold text-on-surface">Certificate Available</h3>
+<span class="text-[12px] text-outline">3h ago</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-1">Your certificate for Environmental Leadership is ready for download.</p>
+</div>
+</div>
+<!-- New Achievement -->
+<div class="bg-white p-4 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex gap-4 items-start border-l-4 border-secondary-fixed-dim">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">trophy</span>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-[16px] font-bold text-on-surface">New Achievement</h3>
+<span class="text-[12px] text-outline">5h ago</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-1">Congratulations! You earned the "Tree Guardian" badge for your consistency.</p>
+</div>
+</div>
+<!-- NGO Announcement -->
+<div class="bg-white p-4 rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex gap-4 items-start">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A professional NGO logo for WWF with a minimalist panda design, set against a clean white background in a corporate circular profile format. High fidelity digital logo art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoqS6fwM3FIN2KI9_yNK7-61ABBRLeHcaSeWyHQJa-lEJ3dyhOzkigZz_ziZlBHJdRR-oEtv8hhlAwrzOgLbi05nrtqIsmj8ql-dZQe96qnj5E4NqbivSfE0EuiKvN8yhCS0emaPuiwOrhY95_nL37o-zCuOuJPGpUovjLX9NKDpGuR53RbH9RXwp3lokScb-xposzf1YSu2Mk07vNVQkhYml-7kncyWCap7bpoTTwZAno4LMY3o2lrzcb9SnbwOwvsCf3ZnOADidU"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-[16px] font-bold text-on-surface">NGO Announcement</h3>
+<span class="text-[12px] text-outline">1d ago</span>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-1">WWF Cameroon launched a new sustainability challenge. Join now to earn extra rewards!</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-xs py-base bg-surface shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] h-20">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest transition-colors rounded-full" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-caps text-label-caps">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest transition-colors rounded-full" href="#">
+<span class="material-symbols-outlined">nature_people</span>
+<span class="font-label-caps text-label-caps">EcoQuest</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest transition-colors rounded-full" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-label-caps">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-container-highest transition-colors rounded-full" href="#">
+<span class="material-symbols-outlined">workspace_premium</span>
+<span class="font-label-caps text-label-caps">Rewards</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-caps text-label-caps">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for notification items
+        document.querySelectorAll('.rounded-xl').forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.add('scale-[0.98]');
+                setTimeout(() => {
+                    this.classList.remove('scale-[0.98]');
+                    // Simulate marking as read
+                    const dot = this.querySelector('.active-dot');
+                    if (dot) {
+                        dot.style.opacity = '0';
+                        setTimeout(() => dot.remove(), 300);
+                    }
+                }, 100);
+            });
+        });
+
+        // Chip selection logic
+        const chips = document.querySelectorAll('.rounded-full[class*="font-label-caps"]');
+        chips.forEach(chip => {
+            chip.addEventListener('click', function() {
+                if(this.closest('nav')) return; // Ignore nav items
+                
+                chips.forEach(c => {
+                    if(!c.closest('nav')) {
+                        c.classList.remove('bg-primary', 'text-on-primary');
+                        c.classList.add('bg-surface-container', 'text-on-surface-variant');
+                    }
+                });
+                this.classList.remove('bg-surface-container', 'text-on-surface-variant');
+                this.classList.add('bg-primary', 'text-on-primary');
+            });
+        });
+    </script>
+</body></html>
